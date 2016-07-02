@@ -14,6 +14,12 @@ const Footer = () => (
 );
 
 const App = () => {
+  fetch(top100Uri).then((result) => result.json()).then((top100) => {
+    // TODO: Set state (possibly with mobx or sth. similar)
+  });
+  fetch(top100AlltimeUri).then((result) => result.json()).then((top100) => {
+    // TODO: Set state (possibly with mobx or sth. similar)
+  });
   return (
     <div>
       <Leaderboard />
