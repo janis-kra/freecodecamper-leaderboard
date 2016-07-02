@@ -1,0 +1,24 @@
+{
+  "name": "freecodecamper-leaderboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janis-kra/freecodecamper-leaderboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janis-kra/freecodecamper-leaderboard/issues"
+  },
+  "homepage": "https://github.com/janis-kra/freecodecamper-leaderboard#readme",
+  "devDependencies": {
+    "babel-eslint": "^6.1.0",
+    "eslint": "2.8.0",
+    "eslint-plugin-react": "5.0.1"
+  }
+}
