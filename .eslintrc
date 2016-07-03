@@ -14,7 +14,8 @@
   "globals": {
     "React": true,
     "ReactDOM": true,
-    "marked": true
+    "mobx": true,
+    "mobxReact": true
   },
 
   "ecmaFeatures": {
