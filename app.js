@@ -33,7 +33,7 @@ const User = ({ username, alltime, recent, img }) => (
     <div className='recent'>
       { recent }
     </div>
-    <img src={ img } className='img'/>
+    <img src={ img } className='profile'/>
   </div>
 );
 
