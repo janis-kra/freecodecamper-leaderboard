@@ -1,25 +1,51 @@
-$rowHeight: 75px
+$imgHeight: 75px
+
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
 
 div#app
-  margin: 0 10px
-  width: 100%
+  margin: 10px
+  width: 500px
 
   .leaderboard
-    .user
+    border: 3px solid black
+    @include border-radius(5px)
+
+    h2, .controls, .controls input
+      margin-left: 10px
+
+    .row
       $m: 5px
-      height: $rowHeight
-      margin-top: $m
-      margin-bottom: $m
+      margin: $m 0
+      text-align: center
+
+      & > div:first-child
+        width: $imgHeight
 
       & > div, & > img
         display: inline-block
         width: 25%
-        height: $rowHeight
-        line-height: $rowHeight
+        height: $imgHeight
+        line-height: $imgHeight
         vertical-align: top
-        text-align: center
         margin: 0
 
+    .header, .header > div
+      line-height: inherit
+      height: inherit
+      font-weight: bold
+
+    .user
+      height: $imgHeight
+
       img.profile
-        width: $rowHeight
-        height: $rowHeight
+        width: $imgHeight
+        height: $imgHeight
+
+
+    .user:nth-child(2n+1)
+      background: #E0E0E0
+    .user:nth-child(2n+0)
+      background: #EEEEEE

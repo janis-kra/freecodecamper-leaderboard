@@ -22,8 +22,24 @@ const Controls = () => {
   );
 };
 
+const LeaderboardHeader = () => (
+  <div className='header row'>
+    <div></div>
+    <div>
+      Name
+    </div>
+    <div>
+      All-time score
+    </div>
+    <div>
+      30-day score
+    </div>
+  </div>
+);
+
 const User = ({ username, alltime, recent, img }) => (
-  <div className='user'>
+  <div className='user row'>
+    <img src={ img } className='profile'/>
     <div className='username'>
       { username }
     </div>
@@ -33,7 +49,6 @@ const User = ({ username, alltime, recent, img }) => (
     <div className='recent'>
       { recent }
     </div>
-    <img src={ img } className='profile'/>
   </div>
 );
 
@@ -42,6 +57,8 @@ const Leaderboard = mobxReact.observer(() => {
   return (
     <div className='leaderboard'>
       <h2>Leaderboard</h2>
+      <Controls />
+      <LeaderboardHeader />
       { top.map((user) => <User {...user} />)}
     </div>
   );
@@ -63,7 +80,6 @@ const App = mobxReact.observer(() => {
 
   return (
     <div>
-      <Controls />
       <Leaderboard />
       <Footer />
     </div>
